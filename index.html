@@ -10,7 +10,6 @@
 
   <body>
 
-
     <header>
     <div class="header_container">
           <div class="header_title">
@@ -18,73 +17,77 @@
             <h2>Front End <span class="dev">Developer</span></h2>
           </div>
           <div class="header-links"> 
+             <div class="h-link">
+                 <a href="#project_images" alt="">Projects</a>
+            </div>
               <div class="h-link">
-                   <a href="www" alt="">About</a>
+                   <a href="#content_about" alt="">About</a>
               </div>
               <div class="h-link">
-                    <a href="www" alt="">Projects</a>
+                   <a href="#content_resume" alt="">Resume</a>
               </div>
               <div class="h-link">
-                   <a href="www" alt="">Resume</a>
-              </div>
-              <div class="h-link">
-                   <a href="www" alt="">Contact</a>
+                   <a href="#content_contact" alt="">Contact</a>
              </div>
           </div>
     </div>
+   </header>
 
-    </header>
+   <main>
 
-    <main>
+     <aside>
+       <div class="aside_intro">
+        <h3>
+         Front End
+         Project
+        </h3>
+        <p class="aside_p">This website is my first font end project. It has utilised HTML and CSS skills. Incorprating Javascript elements will make it even more fun.</p>
+       </div>
+       <div class="projects">
+        <h3>
+          Projects
+        </h3>
+         <p class="aside_p">Some info about the projects</p>
+       </div>
+     </aside>
 
-       <aside>
-            <h3>
-                Front End
-                Project
-            </h3>
-            <p class="aside_p">This website is my first font end project. It has utilised HTML and CSS skills. Incorprating Javascript elements will make it even more fun.</p>
-        </aside>
+     <div class="background">
 
-        <div class="background_image">
-    
-
-                <section class="flagship_image_section">
-                  <!--<a href="hjds"> <img src="../my-projects-website/assets/images/flagship-image.png" alt="" height="stretch" width="stretch"></a>-->
-                      <div class="intro_text_title">
-                          <p>First Project</p>       
-                      </div>
-                      <div class="intro_text">
-                        <p>Here are some words about it!</p>       
+      <section class="flagship_image_section">
+        <div class="intro_text_title">
+          <p>First Project</p>       
+        </div>
+        <div class="intro_text">
+          <p>Here are some words about it!</p>       
+         </div>
+      </section>
+      <section class="project_images" id="project_images">
+         <div class="project_image_one">
+            <div class="project_image_one_img">
+              <a href="hjds"> <img src="../my-projects-website/assets/images/proj1.png" alt=""></a>
+                 <h1 class="card-titles">Project One</h1>
+                    <div class="more-text">
+                       <p>It is a project</p>
                     </div>
-                </section>
-                <section class="project_images">
+            </div>
+         </div>
 
-                    <div class="project_image_one">
-                        <div class="project_image_one_img">
-                        <a href="hjds"> <img src="../my-projects-website/assets/images/proj1.png" alt=""></a>
-                          <h1 class="card-titles">title</h1>
-                          <div class="more-text">
-                              <p>here is the text</p>
-                          </div>
-                        </div>
-                        </div>
-
-                        <div class="project_image_two">
-                          <div class="project_image_two_img">
-                          <a href="hjds"> <img src="../my-projects-website/assets/images/proj2.png" alt=""b></a>
-                          <h1 class="card-titles">title</h1>
-                          <div class="more-text">
-                              <p>here is the text</p>
-                          </div>
-                          </div>
+         <div class="project_image_two">
+            <div class="project_image_two_img">
+               <a href="hjds"> <img src="../my-projects-website/assets/images/proj2.png" alt=""b></a>
+                  <h1 class="card-titles">Project Two</h1>
+                     <div class="more-text">
+                        <p>It is also a project</p>
                       </div>
+              </div>
+          </div>
 
                             <div class="project_image_three">
                                 <div class="project_image_three_img">
                                 <a href="hjds"> <img src="../my-projects-website/assets/images/proj3.png" alt=""></a>
-                                  <h1 class="card-titles">title</h1>
+                                  <h1 class="card-titles">Project Three</h1>
                                   <div class="more-text">
-                                      <p>here is the text</p>
+                                      <p>So is this one</p>
                                   </div>
                                 </div>
                                 </div>
@@ -92,12 +95,33 @@
                             <div class="project_image_four">
                                   <div class="project_image_three_img">
                                 <a href="hjds"> <img src="../my-projects-website/assets/images/proj4.png" alt=""></a>
-                                  <h1 class="card-titles">title</h1>
+                                  <h1 class="card-titles">Project Four</h1>
                                   <div class="more-text">
-                                      <p>here is the text</p>
+                                      <p>Can you beleive it? Another Project</p>
                                   </div>
                                 </div> 
                             </div>
+
+                  </section>
+                  <section class="content_about" id="content_about">
+                    <h4>About</h4>
+                    <p> I have been a web developer for approx 2 weeks, this is my finest work</p>
+                  </section>
+                  <section class="content_resume" id="content_resume">
+                    <h4>Resume</h4>
+                    <div class="h-link">
+                    <a href="ghjas">Download Resume</a>
+                  </div>
+                    </section>
+                    <section class="content_contact" id="centent_contact">
+                      <h4>Contact</h4>
+                      <p>Please contact me via email
+                        ChrisW1096@gmail.com 
+                      </p>
+                      <br>
+                        <div class="h-link">
+                          <a href="mailto:chrisw1096@gmail.com">Send Email</a>
+                        </div>
 
                   </section>
            </div>
@@ -106,8 +130,7 @@
 
     <footer>
         <div class="container">
-
-
+          <p>Made by       Chris Wallace        2022</p>
         </div>
     </footer>
 

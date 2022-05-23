@@ -1,3 +1,4 @@
+/* Variable directory */
 :root {
     --dark: #13293d;
     --light: #fff;
@@ -7,9 +8,11 @@
     --button_color: rgb(120, 195, 139);
     --button_color_active:rgb(72, 161, 94);
 }
+/* All items */
 *{
     font-family: Arial, Helvetica, sans-serif;
 }
+/* Header specific items */
 header {
     display: flex;
 width:100%;
@@ -18,7 +21,6 @@ align-items: center;
 justify-content: center;
 background-color: var(--background);
 padding:15px 0;
-
 }
 .header_container{
     display: flex;
@@ -28,14 +30,16 @@ padding:15px 0;
     justify-content: space-between;
     align-items: center;
 }
-
-.header_title{
-    align-self: flex-start;
+.header-links {
+    display: inline-flex;
+    justify-items: space-around;
+    border: 2px var(--background) solid;
 }
-.header_links{
-    align-self: flex-end;
+.dev {
+    color: var(--contrast_text);
+    font-style: italic;
 }
-
+/*--- All H group text, except h4, see "additonal info areas" at bottom of css file ---*/
 h1 {
     font-size: 200%;
     text-align: left;
@@ -52,27 +56,102 @@ h3{
     text-align: center;
     line-height: 30px;
 }
+/* Body = everything expect the header and footer */
 body {
     display:flex;
     flex-direction: column;
-    width:100%;
+    width:97%;
     }
-    
+/* Aside is the LHS panel */
+aside{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    padding:30px 0;
+    margin:2%;
+    max-width: 130px;
+    min-width: 70px;
+}
 .aside_p{
     font-size: 70%;
     line-height: 22px;
     text-align: center;
 }
-.dev {
+.aside_intro{
+    padding-top: 200px;
+    height:1000px;
+}
+.projects{
+    height:500px;
+}
+/* Main is everything except the header, footer and aside */
+main {
+    display:flex;
+    flex-direction:row;
+} 
+/* Flagship images is the background image in this case */
+.flagship_image_section{
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-end;
+    flex-direction: column;
+    padding: 50% 5% 15% 5%;
+    background-image: url(../images/flagship_image_2.jpeg);
+    background-color: black;
+    height: 550px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width:fill;
+}
+.intro_text_title{
+    color:rgb(249, 107, 19);
+    font-size: 300%;
+    margin:15px;
+}
+.intro_text {
+    color:rgb(249, 107, 19);
+    font-size: 150%;
+    margin:7px;
+}
+/* Project images section is for images of the project */
+.project_images {
+    display:flex;
+flex-flow: row wrap;
+    justify-content: space-around;
+    width:100%;
+    flex:1 1 50%;
+    padding:10px 0;
+}
+.project_images img[src$=".png"]{
+    width:400px;
+    height: 90%;
+    border-radius: 15%;
+}
+.card-titles .more-text {
+    display:flex;
+    flex-direction: column;
     color: var(--contrast_text);
-    font-style: italic;
 }
-.header-links {
-    display: inline-flex;
-    justify-items: space-around;
-    border: 2px var(--background) solid;
+.more-text{
+    color: var(--header_text);
+    font-size: 15px;
 }
-
+/* Addtional info areas */
+.content_about, .content_resume, .content_contact{
+    margin:30px 15px 15px;
+    text-align: center;
+    padding:15px;
+}
+h4{
+    color:var(--header_text);
+    font-size: 20px;
+    margin:15px;
+    background-color: var(--button_color);
+    border-radius: 15px;
+}
+/* Link fottating */
 .h-link a:hover{
     padding:5px;
     border: 2px black solid;
@@ -84,7 +163,7 @@ body {
 .h-link a:link{
     padding:5px;
     border: 2px var(--background) solid;
-    font-size: 150%;
+    font-size: 110%;
     color: var(--header_text);
     text-decoration: none;
 }
@@ -94,73 +173,18 @@ a:active{
     background-color: var(--button_color_active);
 }
 a:visited{
+    padding:5px;
+    border: 2px var(--background) solid;
+    font-size: 110%;
+    color: var(--header_text);
     text-decoration: none;
 }
-
-main {
-    display:flex;
-    flex-direction:row;
-
-} 
-
-.flagship_image_section{
-    display: flex;
-    justify-content: flex-start;
-    align-content: flex-end;
-    flex-direction: column;
-    padding: 50% 5% 5%;
-    background-image: url(../images/flagship_image_2.jpeg);
-    background-color: black;
-    height: 600px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    height: fill;
-    width:fill;
-
-}
-.intro_text_title{
-    color:var(--header_text);
-    font-size: 300%;
-    margin:15px;
-}
-.intro_text {
-    color:var(--contrast_text);
-    font-size: 150%;
-    margin:7px;
-}
-
-
-.project_images {
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap:5% 10%;
-    flex:1 1 50%;
-}
-
-.project_images img[src$=".png"]{
-    width:90%;
-    height: 90%;
-    border-radius: 15%;
-}
-.card-titles .more-text {
-    display:flex;
-    flex-direction: column;
-    color: var(--contrast_text);
-}
-
-aside{
-    display:flex;
-    flex-direction:column;
-    align-items: center;
-    padding:300px 0;
-    margin:2%;
-    max-width: 130px;
-    min-width: 70px;
-
-}
+/* Footer */
 footer{
     width:100%;
+    text-align: center;
+    background-color: var(--button_color);
+    padding:20px;
+    margin:15px;
+    border:2px var(--contrast_text) solid;
 }
