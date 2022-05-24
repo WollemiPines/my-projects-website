@@ -11,6 +11,7 @@
 /* All items */
 *{
     font-family: Arial, Helvetica, sans-serif;
+    text-decoration:none ;
 }
 /* Header specific items */
 header {
@@ -104,6 +105,7 @@ main {
     background-size: cover;
     background-attachment: fixed;
     width:fill;
+    margin:-50px 0 0 0;
 }
 .intro_text_title{
     color:rgb(249, 107, 19);
@@ -133,6 +135,7 @@ flex-flow: row wrap;
     display:flex;
     flex-direction: column;
     color: var(--contrast_text);
+    text-decoration: none;
 }
 .more-text{
     color: var(--header_text);
@@ -160,6 +163,14 @@ h4{
     transform: skew(-25deg);
     text-decoration: none;
 }
+.h-link a:hover{
+    padding:5px;
+    border: 2px black solid;
+    background-color: var(--button_color);
+    border-radius: 15px 6px 15px;
+    transform: skew(-25deg);
+    text-decoration: none;
+}
 .h-link a:link{
     padding:5px;
     border: 2px var(--background) solid;
@@ -169,8 +180,7 @@ h4{
 }
 a:active{
     text-decoration: none;
-    border:2px  black solid;
-    background-color: var(--button_color_active);
+
 }
 a:visited{
     padding:5px;
