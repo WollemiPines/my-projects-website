@@ -12,6 +12,8 @@
 *{
     font-family: Arial, Helvetica, sans-serif;
     text-decoration:none ;
+    background-color: var(--background);
+    z-index: 2;
 }
 /* Header specific items */
 header {
@@ -22,6 +24,7 @@ align-items: center;
 justify-content: center;
 background-color: var(--background);
 padding:15px 0;
+z-index: 3;
 }
 .header_container{
     display: flex;
@@ -91,31 +94,29 @@ main {
     flex-direction:row;
 } 
 /* Flagship images is the background image in this case */
-.flagship_image_section{
-    display: flex;
-    justify-content: flex-start;
-    align-content: flex-end;
+.main_content{
+    display:flex;
     flex-direction: column;
-    padding: 50% 5% 15% 5%;
-    background-image: url(../images/flagship_image_2.jpeg);
-    background-color: black;
-    height: 550px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    width:100%;
+    background-color: var(--background);
+}
+.flagship_image_section{
+    padding: 10% 2%;
+    background-color: rgb(255, 255, 255);
     background-attachment: fixed;
-    width:fill;
-    margin:-50px 0 0 0;
+    position: fixed;
+    width:80%;
+    z-index:1;
 }
 .intro_text_title{
     color:rgb(249, 107, 19);
     font-size: 300%;
-    margin:15px;
+    margin:-260px 400px 0 30px;
 }
 .intro_text {
     color:rgb(249, 107, 19);
     font-size: 150%;
-    margin:7px;
+    margin:15px 400px 0 30px;
 }
 /* Project images section is for images of the project */
 .project_images {
@@ -124,7 +125,8 @@ flex-flow: row wrap;
     justify-content: space-around;
     width:100%;
     flex:1 1 50%;
-    padding:10px 0;
+    margin-top: 600px;
+    padding:10px 0 0;
 }
 .project_images img[src$=".png"]{
     width:400px;
@@ -143,9 +145,8 @@ flex-flow: row wrap;
 }
 /* Addtional info areas */
 .content_about, .content_resume, .content_contact{
-    margin:30px 15px 15px;
     text-align: center;
-    padding:15px;
+    padding:30px 2% 30px;
 }
 h4{
     color:var(--header_text);
@@ -157,15 +158,6 @@ h4{
 /* Link fottating */
 .h-link a:hover{
     padding:5px;
-    border: 2px black solid;
-    background-color: var(--button_color);
-    border-radius: 15px 6px 15px;
-    transform: skew(-25deg);
-    text-decoration: none;
-}
-.h-link a:hover{
-    padding:5px;
-    border: 2px black solid;
     background-color: var(--button_color);
     border-radius: 15px 6px 15px;
     transform: skew(-25deg);
@@ -173,18 +165,15 @@ h4{
 }
 .h-link a:link{
     padding:5px;
-    border: 2px var(--background) solid;
     font-size: 110%;
     color: var(--header_text);
     text-decoration: none;
 }
 a:active{
     text-decoration: none;
-
 }
 a:visited{
     padding:5px;
-    border: 2px var(--background) solid;
     font-size: 110%;
     color: var(--header_text);
     text-decoration: none;
@@ -192,9 +181,11 @@ a:visited{
 /* Footer */
 footer{
     width:100%;
+    background-color: var(--background);
+    padding:37px;
+}
+.container{
     text-align: center;
-    background-color: var(--button_color);
-    padding:20px;
-    margin:15px;
-    border:2px var(--contrast_text) solid;
+    border-top:3px var(--button_color) solid;
+    padding: 15px;
 }
