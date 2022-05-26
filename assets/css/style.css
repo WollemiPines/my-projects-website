@@ -148,6 +148,9 @@ flex-flow: row wrap;
     text-align: center;
     padding:30px 2% 30px;
 }
+.content_about [src$=".png"]{
+border-radius: 20px;
+}
 h4{
     color:var(--header_text);
     font-size: 20px;
