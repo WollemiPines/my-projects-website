@@ -37,7 +37,6 @@ z-index: 3;
 .header-links {
     display: inline-flex;
     justify-items: space-around;
-    border: 2px var(--background) solid;
 }
 .dev {
     color: var(--contrast_text);
@@ -74,7 +73,7 @@ aside{
     padding:30px 0;
     margin:2%;
     max-width: 130px;
-    min-width: 70px;
+    min-width: 100px;
 }
 .aside_p{
     font-size: 70%;
@@ -99,31 +98,32 @@ main {
     flex-direction: column;
     width:100%;
     background-color: var(--background);
+    padding-top: 100px;
 }
 .flagship_image_section{
-    padding: 10% 2%;
+    padding: 0 3% 0 0.5%;
     background-color: rgb(255, 255, 255);
     background-attachment: fixed;
     position: fixed;
-    width:80%;
     z-index:1;
+    flex:1 2 50%;
 }
 .intro_text_title{
     color:rgb(249, 107, 19);
-    font-size: 300%;
-    margin:-260px 400px 0 30px;
+    font-size: 250%;
+    margin:-100px 0 0 30px;
 }
 .intro_text {
     color:rgb(249, 107, 19);
-    font-size: 150%;
-    margin:15px 400px 0 30px;
+    font-size: 120%;
+    margin:15px 0 0 30px;
 }
 /* Project images section is for images of the project */
 .project_images {
     display:flex;
 flex-flow: row wrap;
     justify-content: space-around;
-    width:100%;
+    width:102%;
     flex:1 1 50%;
     margin-top: 600px;
     padding:10px 0 0;
@@ -163,7 +163,20 @@ h4{
     transform: skew(-25deg);
     text-decoration: none;
 }
+.link a:hover{
+    padding:5px;
+    background-color: var(--button_color);
+    border-radius: 15px 6px 15px;
+    transform: skew(-25deg);
+    text-decoration: none;
+}
 .h-link a:link{
+    padding:5px;
+    font-size: 110%;
+    color: var(--header_text);
+    text-decoration: none;
+}
+.link a:link{
     padding:5px;
     font-size: 110%;
     color: var(--header_text);
@@ -188,4 +201,36 @@ footer{
     text-align: center;
     border-top:3px var(--button_color) solid;
     padding: 15px;
+}
+/* Resizing page */
+@media screen and (max-width: 980px) {
+    .project_images{
+        margin-top: 405px;
+    }
+}
+@media screen and (max-width: 520px) {
+    .project_images img[src$=".png"]{
+        width:200px;
+    }
+    .project_images{
+        margin-top: 200px;
+    }
+    .header_container{
+        font-size: 60%;
+    }
+    .flagship_image_section{
+        margin-top: 0;
+        font-size: 50%;
+    }
+    aside{
+        font-size: 60%;
+        width:100px;
+        margin-top:-100px;
+    }
+    .intro_text_title {
+        margin:-60px 0 0 10px;
+    }
+    .intro_text {
+        margin:15px 0 0 10px;
+    }
 }
